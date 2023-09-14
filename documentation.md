@@ -105,3 +105,6 @@
        "error": "person with id {user_id} does not exist"
    }
    ```
+
+
+- You can test out the api on Postman using this [link](https://documenter.getpostman.com/view/22305104/2s9YC5xruH)

@@ -42,7 +42,7 @@ class PersonView(APIView):
         try:
             person = Person.objects.get(id=user_id)
         except:
-            return JsonResponse({"error":"person does not exist"}, status=status.HTTP_404_NOT_FOUND)
+            return JsonResponse({"error":"person with id " + str(user_id) + " does not exist"}, status=status.HTTP_404_NOT_FOUND)
 
         serializer = self.serializer_class(person, context={'request': request})
         data = serializer.data
@@ -62,7 +62,7 @@ class PersonView(APIView):
         try:
             person = Person.objects.get(id=user_id)
         except:
-            return JsonResponse({"error":"person does not exist"}, status=status.HTTP_404_NOT_FOUND)
+            return JsonResponse({"error":"person with id " + str(user_id) + " does not exist"}, status=status.HTTP_404_NOT_FOUND)
 
         try:
             person.name = name
@@ -86,7 +86,7 @@ class PersonView(APIView):
         try:
             person = Person.objects.get(id=user_id)
         except:
-            return JsonResponse({"error":"person does not exist"}, status=status.HTTP_404_NOT_FOUND)
+            return JsonResponse({"error":"person with id " + str(user_id) + " does not exist"}, status=status.HTTP_404_NOT_FOUND)
 
         #deletes a person object
         person.delete()

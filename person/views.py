@@ -69,7 +69,13 @@ class PersonView(APIView):
             person.save()
         except:
             return JsonResponse({"error":"name already taken, Pick another name"}, status=status.HTTP_404_NOT_FOUND)
-        return JsonResponse({"message":"Person updated successfully"}, status=status.HTTP_200_OK)
+        data = {
+            "message":"Person updated successfully",
+            "id": person.id,
+            "name": person.name
+
+        }
+        return JsonResponse(data, status=status.HTTP_200_OK)
 
 
     def delete(self, request, user_id):

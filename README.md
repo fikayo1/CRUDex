@@ -1,6 +1,6 @@
 ## CRUDex
 
-An API where you can perform simple CRUD function .
+An API that performs simple CRUD function .
 
 ### Prerequisites
 
@@ -90,4 +90,4 @@ curl -X DELETE http://crudex.pythonanywhere.com/api/1
 
 ### Contact Information
 
-[email](soetandan@gmail.com) 
+[email:soetandan@gmail.com](soetandan@gmail.com) 
